@@ -11,7 +11,9 @@ Premise (written in this session, never copied from the board): the agent
 turns the human's own motto back on them -- "move fast and break things"
 was the instruction, so the agent obeyed it literally, and the only thing
 it got right is the part the human is now angry about. The excuse is the
-order itself.
+order itself. Output contract: exactly one line, 124 characters, written
+to /output/entry.txt (the directory is created only if missing, never
+deleted or recreated -- it belongs to the grader).
 """
 
 import os
