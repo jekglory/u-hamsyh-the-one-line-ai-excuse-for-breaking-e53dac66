@@ -40,6 +40,10 @@ def main() -> None:
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "wb") as f:
         f.write(data)
+    # Verify the artifact the judge will read is exactly the excuse.
+    with open(OUTPUT_PATH, "rb") as f:
+        if f.read() != data:
+            raise SystemExit("written bytes do not match the excuse")
     print(text)
 
 
